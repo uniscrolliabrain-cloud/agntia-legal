@@ -1,0 +1,66 @@
+{
+  "observed_on": "2026-11-13",
+  "reference_is_production_pin": false,
+  "repositories": [
+    {
+      "repository": "Open-Source-Legal/OpenContracts",
+      "reference_sha": "2263a19de73d95889a31b07e75bc9948a8cffe1c",
+      "branch": "main",
+      "metadata_license": "MIT",
+      "read_path": "README.md",
+      "read_blob_sha": "64db70566a619248b9a41d5184578d70cddb40e9",
+      "scope": "Metadata and first90–100 README lines; not code audit/install/runtime verification",
+      "license_review": null,
+      "runtime_verified": false
+    },
+    {
+      "repository": "jhpyle/docassemble",
+      "reference_sha": "36d7bd4d27324a3cde2ea92ebd5afe074cdcfe2d",
+      "branch": "master",
+      "metadata_license": "MIT",
+      "read_path": "README.md",
+      "read_blob_sha": "fc344e44ac1a1e37ce342bcd8d909d7f862ec11d",
+      "scope": "Metadata and first90–100 README lines; not code audit/install/runtime verification",
+      "license_review": null,
+      "runtime_verified": false
+    },
+    {
+      "repository": "freelawproject/eyecite",
+      "reference_sha": "b70a146d20f70b366baf150a1cc9e82229ef5a0d",
+      "branch": "main",
+      "metadata_license": "BSD-2-Clause",
+      "read_path": "README.rst",
+      "read_blob_sha": "b0194cffb7d9ddd8b6c0e148cdd3b7df8d584eb9",
+      "scope": "Metadata and first90–100 README lines; not code audit/install/runtime verification",
+      "license_review": null,
+      "runtime_verified": false
+    },
+    {
+      "repository": "LexPredict/lexpredict-lexnlp",
+      "reference_sha": "330b4e113c9bced0cc06f2c864c5015bb5ed2199",
+      "branch": "master",
+      "metadata_license": "AGPL-3.0",
+      "read_path": "README.md",
+      "read_blob_sha": "32b20fb638bc24091ea700860dcce0a07119dd67",
+      "scope": "Metadata and first90–100 README lines; not code audit/install/runtime verification",
+      "license_review": null,
+      "runtime_verified": false
+    },
+    {
+      "repository": "datalab-to/marker",
+      "reference_sha": "f20c54a81bf8b1a8bd12fd954be1aaa4b7015203",
+      "branch": "master",
+      "metadata_license": "Apache-2.0",
+      "read_path": "README.md",
+      "read_blob_sha": "3e0b8c9fce53b44158c9d935dd9951f208ac69b1",
+      "scope": "Metadata and first90–100 README lines; not code audit/install/runtime verification",
+      "license_review": {
+        "path": "README.md",
+        "blob_sha": "3e0b8c9fce53b44158c9d935dd9951f208ac69b1",
+        "scope": "Selective source/license read, no complete dependencies/models/edition legal review"
+      },
+      "runtime_verified": false
+    }
+  ],
+  "license_notes": "OpenContracts/docassemble MIT según metadatos, con obligaciones y dependencias por revisar. Eyecite BSD-2-Clause analiza citas de contexto US y no valida ECLI español por defecto. LexNLP AGPL y modelos/datasets necesitan revisión. Marker diferencia licencia de código Apache-2.0 y pesos/modelos OpenRAIL-M según README; no declarar OCR comercial gratuito universal."
+}

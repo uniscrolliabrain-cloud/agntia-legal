@@ -1,0 +1,226 @@
+{
+  "observed_on": "2026-11-13",
+  "method": "Selective primary-source abstracts/official docs/vendor announcements and pinned repository metadata/README/license reads; no runtime or benchmarks",
+  "sources": [
+    {
+      "id": "H01",
+      "type": "parent_code",
+      "title": "agente: contratos inspeccionados por SHA",
+      "url": "https://github.com/uniscrolliabrain-cloud/agente/tree/54b8d5407a8576459448c4d059a877297d18ca7a",
+      "observed_on": "2026-11-13",
+      "scope": "Mapa heredado de31archivos más6nuevas lecturas selectivas. Main cotejado13noviembre; no auditoría exhaustiva, tests o cambios.",
+      "access_status": "OBSERVED_CODE",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "P01",
+      "type": "paper",
+      "title": "Legal Research Bench",
+      "url": "https://arxiv.org/abs/2610.00609",
+      "observed_on": "2026-11-13",
+      "scope": "Abstract/versiones disponibles consultados, no reproducción; inferencia de diseño: All-pass con autoridades verificadas inspira tests; benchmark estadounidense no certifica derecho español.",
+      "access_status": "SELECTIVE_READ",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "P02",
+      "type": "paper",
+      "title": "Who Checks the Citations?",
+      "url": "https://arxiv.org/abs/2606.21155",
+      "observed_on": "2026-11-13",
+      "scope": "Abstract/versiones disponibles consultados, no reproducción; inferencia de diseño: Distinguir existencia, citas sutilmente erróneas y acceso limitado; abstener/escalar si falta fuente.",
+      "access_status": "SELECTIVE_READ",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "P03",
+      "type": "paper",
+      "title": "LegalCiteBench",
+      "url": "https://arxiv.org/abs/2605.10186",
+      "observed_on": "2026-11-13",
+      "scope": "Abstract/versiones disponibles consultados, no reproducción; inferencia de diseño: No confiar en recuperación closed-book ni usar prompts como verificador suficiente de precedentes; alcance US no es España.",
+      "access_status": "SELECTIVE_READ",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "V01",
+      "type": "vendor_primary",
+      "title": "Harvey",
+      "url": "https://www.harvey.ai/platform/agents",
+      "observed_on": "2026-11-13",
+      "scope": "Patrón de intake, fuentes, espacios/materias, contratos y seguimiento; no identidad profesional heredada. Fuente comercial/regulatoria selectiva, no prueba de producto; no heredar certificaciones/precios.",
+      "access_status": "DOCUMENTED_NOT_TESTED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "V02",
+      "type": "vendor_primary",
+      "title": "CoCounsel Thomson Reuters",
+      "url": "https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-launches-next-generation-of-cocounsel-legal-the-ai-ecosystem-built-for-legal-professionals",
+      "observed_on": "2026-11-13",
+      "scope": "Referencia de flujos jurídicos con fuentes/revisión; términos y cobertura territorial por verificar. Fuente comercial/regulatoria selectiva, no prueba de producto; no heredar certificaciones/precios.",
+      "access_status": "DOCUMENTED_NOT_TESTED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "V03",
+      "type": "vendor_primary",
+      "title": "Lexis Protege",
+      "url": "https://www.lexisnexis.com/en-us/products/protege.page",
+      "observed_on": "2026-11-13",
+      "scope": "Referencia pendiente: página de producto respondió403; no se habilita API/capacidad por esta mención. Fuente comercial/regulatoria selectiva, no prueba de producto; no heredar certificaciones/precios.",
+      "access_status": "HTTP_403_NOT_VERIFIED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "S01",
+      "type": "security_or_law_primary",
+      "title": "Supabase JWT",
+      "url": "https://supabase.com/docs/guides/auth/jwts",
+      "observed_on": "2026-11-13",
+      "scope": "Verificación/claims/JWKS; sin tokens de usuarios reales.",
+      "access_status": "DOCUMENTED_NOT_TESTED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "S02",
+      "type": "security_or_law_primary",
+      "title": "Supabase RLS",
+      "url": "https://supabase.com/docs/guides/database/postgres/row-level-security",
+      "observed_on": "2026-11-13",
+      "scope": "Scope de SQL y user_metadata editable; sin DB configurada.",
+      "access_status": "DOCUMENTED_NOT_TESTED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "N01",
+      "type": "security_or_law_primary",
+      "title": "Anam overview",
+      "url": "https://anam.ai/docs/introduction/overview",
+      "observed_on": "2026-11-13",
+      "scope": "Presencia para agente existente y pipeline; sin sesión/plan/API test.",
+      "access_status": "DOCUMENTED_NOT_TESTED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "L01",
+      "type": "security_or_law_primary",
+      "title": "RGPD",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "observed_on": "2026-11-13",
+      "scope": "Consulta selectiva, no dictamen universal.",
+      "access_status": "DOCUMENTED_NOT_TESTED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "L02",
+      "type": "security_or_law_primary",
+      "title": "AI Act",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "observed_on": "2026-11-13",
+      "scope": "Uso/rol/fechas/clasificación a revalidar para implementación.",
+      "access_status": "DOCUMENTED_NOT_TESTED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "L03",
+      "type": "security_or_law_primary",
+      "title": "LSSI",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758",
+      "observed_on": "2026-11-13",
+      "scope": "Comunicaciones/propósito y oposición según caso, revisión humana.",
+      "access_status": "DOCUMENTED_NOT_TESTED",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "D01",
+      "type": "domain_primary",
+      "title": "Estatuto Abogacía",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-4568",
+      "observed_on": "2026-11-13",
+      "scope": "Ámbito profesional, responsabilidades y encargo requieren revisión competente, no suplantación por software.",
+      "access_status": "SELECTIVE_READ",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "D02",
+      "type": "domain_primary",
+      "title": "eIDAS",
+      "url": "https://eur-lex.europa.eu/eli/reg/2014/910/oj",
+      "observed_on": "2026-11-13",
+      "scope": "Firma y representación según acto/territorio; un proveedor de firma no satisface automáticamente todas formalidades.",
+      "access_status": "SELECTIVE_READ",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "R01",
+      "type": "repository",
+      "title": "Open-Source-Legal/OpenContracts",
+      "url": "https://github.com/Open-Source-Legal/OpenContracts/tree/2263a19de73d95889a31b07e75bc9948a8cffe1c",
+      "observed_on": "2026-11-13",
+      "scope": "Metadatos y README selectivos por SHA; ver repositories.json; rama por defecto no es release aprobada.",
+      "access_status": "OBSERVED_REPOSITORY",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "R02",
+      "type": "repository",
+      "title": "jhpyle/docassemble",
+      "url": "https://github.com/jhpyle/docassemble/tree/36d7bd4d27324a3cde2ea92ebd5afe074cdcfe2d",
+      "observed_on": "2026-11-13",
+      "scope": "Metadatos y README selectivos por SHA; ver repositories.json; rama por defecto no es release aprobada.",
+      "access_status": "OBSERVED_REPOSITORY",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "R03",
+      "type": "repository",
+      "title": "freelawproject/eyecite",
+      "url": "https://github.com/freelawproject/eyecite/tree/b70a146d20f70b366baf150a1cc9e82229ef5a0d",
+      "observed_on": "2026-11-13",
+      "scope": "Metadatos y README selectivos por SHA; ver repositories.json; rama por defecto no es release aprobada.",
+      "access_status": "OBSERVED_REPOSITORY",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "R04",
+      "type": "repository",
+      "title": "LexPredict/lexpredict-lexnlp",
+      "url": "https://github.com/LexPredict/lexpredict-lexnlp/tree/330b4e113c9bced0cc06f2c864c5015bb5ed2199",
+      "observed_on": "2026-11-13",
+      "scope": "Metadatos y README selectivos por SHA; ver repositories.json; rama por defecto no es release aprobada.",
+      "access_status": "OBSERVED_REPOSITORY",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    },
+    {
+      "id": "R05",
+      "type": "repository",
+      "title": "datalab-to/marker",
+      "url": "https://github.com/datalab-to/marker/tree/f20c54a81bf8b1a8bd12fd954be1aaa4b7015203",
+      "observed_on": "2026-11-13",
+      "scope": "Metadatos y README selectivos por SHA; ver repositories.json; rama por defecto no es release aprobada.",
+      "access_status": "OBSERVED_REPOSITORY",
+      "runtime_verified": false,
+      "benchmark_reproduced": false
+    }
+  ]
+}
