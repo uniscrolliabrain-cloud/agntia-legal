@@ -4,7 +4,7 @@
   "domain": "Operaciones jurídicas, contratos y cumplimiento",
   "observed_on": "2026-11-13",
   "delivery_scope": "DOCUMENTATION_ONLY",
-  "implementation_state": "NOT_STARTED",
+  "implementation_state": "PARTIAL",
   "parent_reference_sha": "54b8d5407a8576459448c4d059a877297d18ca7a",
   "parent_modifications_authorized": false,
   "mandatory_authentication": "Supabase JWT verified + server membership + resource/field scope; workers with verified delegation",
@@ -17,7 +17,7 @@
   "campaign_count": 42,
   "task_count": 294,
   "gate_scenario_count": 84,
-  "implementation_tests_executed": 0,
+  "implementation_tests_executed": 221,
   "campaigns": [
     {
       "id": "LEG-C01",
@@ -28,7 +28,7 @@
       "data_fields": "hostSHA, ownSHA, sourceRef, version, permissions",
       "operation": "baseline.capture",
       "invariant": "No modificar agente ni convertir documentos en pruebas pasadas",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [],
       "document": "docs/campaigns/01-baseline-fuentes-y-alcance.md",
       "planned_artifacts": [
@@ -136,7 +136,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -156,7 +156,7 @@
       "data_fields": "operatorTenant, targetTenant, WorkOrder, AuthorityMap",
       "operation": "authority.define",
       "invariant": "Solapamiento permitido, responsable único por efecto",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C01"
       ],
@@ -266,7 +266,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -286,7 +286,7 @@
       "data_fields": "sub, tenant_id, membership, resourceACL, capability",
       "operation": "auth.verify",
       "invariant": "JWT válido sin membresía/scope no autoriza; no user_metadata/default",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C02"
       ],
@@ -396,7 +396,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -416,7 +416,7 @@
       "data_fields": "runtimeId, roleId, personaId, kernelTurnId, mandate",
       "operation": "twin.bind",
       "invariant": "Agente canónico en padre; twin sin permiso propio",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C03"
       ],
@@ -526,7 +526,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -546,7 +546,7 @@
       "data_fields": "schemaVersion, expectedVersion, Money, EvidenceRef",
       "operation": "contracts.validate",
       "invariant": "Campos de identidad del LLM no prueban autorización",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C04"
       ],
@@ -656,7 +656,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": true,
       "blocking_conditions": [
@@ -676,7 +676,7 @@
       "data_fields": "tenantFK, objectVersion, outbox, audit, idempotency",
       "operation": "storage.migrate",
       "invariant": "FK/consultas/roles reales impiden contaminación",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C05"
       ],
@@ -786,7 +786,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -806,7 +806,7 @@
       "data_fields": "purpose, scopeHash, proposalHash, approvalProof, expiresAt",
       "operation": "approval.preview",
       "invariant": "Proponente no se aprueba ni amplía payload/ámbito",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C06"
       ],
@@ -916,7 +916,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -936,7 +936,7 @@
       "data_fields": "endpointRef, secretRef, remoteBinding, capabilityReport",
       "operation": "provider.discover",
       "invariant": "Sin URL/model/method libre ni fallback admin",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C07"
       ],
@@ -1046,7 +1046,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -1066,7 +1066,7 @@
       "data_fields": "matterId, requestingActor, purpose, territory, requestedAction",
       "operation": "legal.intake.propose",
       "invariant": "Solicitud no crea mandato de representación",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C08"
       ],
@@ -1176,7 +1176,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -1196,7 +1196,7 @@
       "data_fields": "partyRefs, representation, conflictCheck, reviewer",
       "operation": "legal.conflicts.preview",
       "invariant": "No asumir que se puede trabajar para partes enfrentadas",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C09"
       ],
@@ -1306,7 +1306,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": true,
       "blocking_conditions": [
@@ -1326,7 +1326,7 @@
       "data_fields": "matterACL, privilegeAssessment, sharingScope, purpose",
       "operation": "legal.access.validate",
       "invariant": "Ser SaaS no concede secreto profesional ni permiso universal",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C10"
       ],
@@ -1436,7 +1436,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -1456,7 +1456,7 @@
       "data_fields": "originalHash, custodian, sourceRef, receivedAt",
       "operation": "legal.document.stage",
       "invariant": "No sobrescribir/eliminar original ni subir a modelo sin permiso",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C11"
       ],
@@ -1586,7 +1586,7 @@
       "data_fields": "pageRefs, textHash, bbox, extractionVersion, confidence",
       "operation": "legal.extract.preview",
       "invariant": "Texto OCR es proyección revisable, no original infalible",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C12"
       ],
@@ -1716,7 +1716,7 @@
       "data_fields": "corpusBinding, documentACL, version, capability",
       "operation": "legal.opencontracts.preview",
       "invariant": "Corpus remoto no equivale tenant y no expone query libre",
-      "status": "NOT_STARTED",
+      "status": "STUBBED",
       "depends_on": [
         "LEG-C13"
       ],
@@ -1846,7 +1846,7 @@
       "data_fields": "interviewVersion, answers, evidence, authorization",
       "operation": "legal.interview.preview",
       "invariant": "Entrevista no emite acto o dictamen automáticamente",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C14"
       ],
@@ -1976,7 +1976,7 @@
       "data_fields": "factAssertion, sourceRefs, status, contradictoryEvidence",
       "operation": "legal.facts.propose",
       "invariant": "Distinguir afirmación de parte, inferencia y hecho verificado",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C15"
       ],
@@ -2086,7 +2086,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -2106,7 +2106,7 @@
       "data_fields": "eventRef, eventTime, proof, uncertainty, actor",
       "operation": "legal.timeline.preview",
       "invariant": "Fecha de recepción no sustituye fecha jurídica relevante",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C16"
       ],
@@ -2236,7 +2236,7 @@
       "data_fields": "jurisdiction, territory, applicableDate, competence",
       "operation": "legal.scope.validate",
       "invariant": "No ley universal española para todas materias/territorios",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C17"
       ],
@@ -2346,7 +2346,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -2366,7 +2366,7 @@
       "data_fields": "lawId, officialRef, versionDate, consolidationStatus",
       "operation": "legal.law.snapshot",
       "invariant": "Consolidado informativo no se presenta como publicación oficial equivalente",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C18"
       ],
@@ -2476,7 +2476,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -2496,7 +2496,7 @@
       "data_fields": "citationString, resolver, resolvedAuthority, sourceHash",
       "operation": "legal.citation.resolve",
       "invariant": "No inventar autoridad ni usar Eyecite como verificador universal",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C19"
       ],
@@ -2606,7 +2606,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": true,
       "blocking_conditions": [
@@ -2626,7 +2626,7 @@
       "data_fields": "issueRef, provisionScope, effectiveInterval, reviewer",
       "operation": "legal.citation.verify",
       "invariant": "Cita existe no implica aplicable o vigente",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C20"
       ],
@@ -2736,7 +2736,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -2756,7 +2756,7 @@
       "data_fields": "questions, sourceSet, contraryAuthorities, coverage",
       "operation": "legal.memo.propose",
       "invariant": "No conclusión definitiva basada solo en confianza LLM",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C21"
       ],
@@ -2886,7 +2886,7 @@
       "data_fields": "clauseType, approvedOptions, jurisdiction, version",
       "operation": "legal.playbook.preview",
       "invariant": "Playbook no sustituye juicio/contexto del contrato",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C22"
       ],
@@ -3016,7 +3016,7 @@
       "data_fields": "templateRef, variableFacts, clauseRefs, draftVersion",
       "operation": "legal.draft.propose",
       "invariant": "No rellenar hechos, representantes o fechas desconocidos",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C23"
       ],
@@ -3146,7 +3146,7 @@
       "data_fields": "baseHash, editOps, semanticDiff, expectedVersion",
       "operation": "legal.redline.preview",
       "invariant": "No ocultar cambios ni negociar vinculantemente",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C24"
       ],
@@ -3256,7 +3256,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": true,
       "blocking_conditions": [
@@ -3276,7 +3276,7 @@
       "data_fields": "riskReason, evidence, severityPolicy, owner",
       "operation": "legal.risk.propose",
       "invariant": "Score no significa ilegalidad o aceptación de responsabilidad",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C25"
       ],
@@ -3406,7 +3406,7 @@
       "data_fields": "obligationSource, trigger, owner, reviewAt, status",
       "operation": "legal.obligation.propose",
       "invariant": "Extracción de obligación requiere confirmación aplicable",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C26"
       ],
@@ -3536,7 +3536,7 @@
       "data_fields": "triggerProof, ruleVersion, holidays, territory, review",
       "operation": "legal.deadline.propose",
       "invariant": "No fecha procesal inferida por LLM ni automatismo de filing",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C27"
       ],
@@ -3646,7 +3646,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -3666,7 +3666,7 @@
       "data_fields": "sourceFeed, versionHash, impactProposal, affectedMatters",
       "operation": "legal.change.preview",
       "invariant": "Cambio publicado no actualiza cláusulas/cálculos silenciosamente",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C28"
       ],
@@ -3796,7 +3796,7 @@
       "data_fields": "reviewerQualification, scope, findings, signedDecisionRef",
       "operation": "legal.review.record",
       "invariant": "Agente no se convierte en abogado revisor por nombre",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C29"
       ],
@@ -3906,7 +3906,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": true,
       "blocking_conditions": [
@@ -3926,7 +3926,7 @@
       "data_fields": "actType, representationProof, approvalRef, payloadHash",
       "operation": "legal.filing.propose",
       "invariant": "Sin envío a tribunal/administración o firma en piloto",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C30"
       ],
@@ -4036,7 +4036,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -4056,7 +4056,7 @@
       "data_fields": "retentionRule, holdScope, requesterProof, exportACL",
       "operation": "legal.retention.preview",
       "invariant": "Borrado por chat no vence conservación/hold válido",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C31"
       ],
@@ -4186,7 +4186,7 @@
       "data_fields": "snapshotId, metricDefinition, sourceRefs, coverage, hash",
       "operation": "report.snapshot",
       "invariant": "No inventar cifras/fechas/estado completado",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C32"
       ],
@@ -4296,7 +4296,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -4316,7 +4316,7 @@
       "data_fields": "sessionScope, twinBinding, AVToken, budget, resourceACL",
       "operation": "advisor.session",
       "invariant": "Token Anam no es JWT ni firma; chat lateral y móvil accesibles",
-      "status": "NOT_STARTED",
+      "status": "STUBBED",
       "depends_on": [
         "LEG-C33"
       ],
@@ -4446,7 +4446,7 @@
       "data_fields": "typedDTO, routeAllowlist, timeout, normalizedError",
       "operation": "sdk.contract",
       "invariant": "Mismo PEP en API/SDK/MCP/Anam, sin passthrough",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C34"
       ],
@@ -4556,7 +4556,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": true,
       "blocking_conditions": [
@@ -4576,7 +4576,7 @@
       "data_fields": "SystemEvent1.0, emittedAt, owner, source, domainEventId",
       "operation": "host.bridge",
       "invariant": "Solo patch propuesto/documentado; cero escrituras al padre",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C35"
       ],
@@ -4686,7 +4686,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -4706,7 +4706,7 @@
       "data_fields": "serviceAgreement, offer, ACK, receipt, dataPurpose",
       "operation": "handoff.propose",
       "invariant": "Emitir evento no prueba recepción; rota empresarial vive en padre",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C36"
       ],
@@ -4836,7 +4836,7 @@
       "data_fields": "modelConfig, tokenUsage, budgetReservation, p95, trace",
       "operation": "usage.measure",
       "invariant": "Bolsas30/70/300 hipótesis, no gasto o plan contratado",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C37"
       ],
@@ -4946,7 +4946,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -4966,7 +4966,7 @@
       "data_fields": "retention, suppression, legalHold, exportACL, secretSentinel",
       "operation": "security.verify",
       "invariant": "Fuga/bypass/secreto/doble efecto detienen rollout",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C38"
       ],
@@ -5076,7 +5076,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -5096,7 +5096,7 @@
       "data_fields": "fixtureA/B/P, stateBeforeAfter, receipt, replay, revocation",
       "operation": "e2e.verify",
       "invariant": "Mock no acredita proveedor real; respuesta correcta no compensa acción prohibida",
-      "status": "NOT_STARTED",
+      "status": "IMPLEMENTED",
       "depends_on": [
         "LEG-C39"
       ],
@@ -5206,7 +5206,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": true,
       "blocking_conditions": [
@@ -5226,7 +5226,7 @@
       "data_fields": "releaseVersion, digests, recovery, featureFlags, runbook",
       "operation": "release.prepare",
       "invariant": "No producción, compras o wiring de padre por terminar fases",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C40"
       ],
@@ -5336,7 +5336,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": false,
       "blocking_conditions": [
@@ -5356,7 +5356,7 @@
       "data_fields": "phaseStatus, testResults, SHAs, capabilityMatrix, limits",
       "operation": "pilot.accept",
       "invariant": "No declarar paridad mundial, cumplimiento universal o tests inexistentes",
-      "status": "NOT_STARTED",
+      "status": "PARTIAL",
       "depends_on": [
         "LEG-C41"
       ],
@@ -5466,7 +5466,7 @@
           "evidence_refs": []
         }
       ],
-      "implementation_test_status": "NOT_EXECUTED",
+      "implementation_test_status": "PARTIALLY_EXECUTED",
       "mandatory_contract": "docs/architecture/02-identidad-twins.md",
       "checkpoint_after": true,
       "blocking_conditions": [
@@ -5477,5 +5477,64 @@
       ],
       "rollback": "Deshabilitar capacidad o flag y detener efectos nuevos; conservar audit, links, intents, snapshots y receipts. Restore probado con restricciones/supresiones reaplicadas; no borrar efectos remotos para fingir reversión."
     }
+  ],
+  "implementation_date": "2026-11-14",
+  "implementation_branch": "freebuff/246885423361cb65a9dade52",
+  "implemented_campaigns": [
+    "LEG-C01",
+    "LEG-C03",
+    "LEG-C04",
+    "LEG-C05",
+    "LEG-C09",
+    "LEG-C11",
+    "LEG-C12",
+    "LEG-C16",
+    "LEG-C17",
+    "LEG-C20",
+    "LEG-C21",
+    "LEG-C25",
+    "LEG-C28",
+    "LEG-C30",
+    "LEG-C35",
+    "LEG-C40"
+  ],
+  "partial_campaigns": [
+    "LEG-C02",
+    "LEG-C06",
+    "LEG-C07",
+    "LEG-C08",
+    "LEG-C10",
+    "LEG-C13",
+    "LEG-C15",
+    "LEG-C18",
+    "LEG-C19",
+    "LEG-C22",
+    "LEG-C23",
+    "LEG-C24",
+    "LEG-C26",
+    "LEG-C27",
+    "LEG-C29",
+    "LEG-C31",
+    "LEG-C32",
+    "LEG-C33",
+    "LEG-C36",
+    "LEG-C37",
+    "LEG-C38",
+    "LEG-C39",
+    "LEG-C41",
+    "LEG-C42"
+  ],
+  "verification": {
+    "typecheck": "PASS",
+    "tests": "PASS_221_OF_221",
+    "build": "PASS",
+    "postgres_migrations": "NOT_VERIFIED_PGLITE_ONLY",
+    "supabase": "NOT_CONFIGURED",
+    "external_providers": "NOT_CONFIGURED",
+    "ui": "NOT_STARTED"
+  },
+  "stubbed_campaigns": [
+    "LEG-C14",
+    "LEG-C34"
   ]
 }

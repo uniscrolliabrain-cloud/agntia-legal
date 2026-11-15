@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-11-14",
+  "repository": "uniscrolliabrain-cloud/agntia-legal",
+  "branch": "freebuff/246885423361cb65a9dade52",
+  "documentation_sha": "b448d7cc162ebf30d97f76e50d402544357383cd",
+  "parent_reference_sha": "54b8d5407a8576459448c4d059a877297d18ca7a",
+  "parent_modified": false,
+  "delivery_scope": "documentation_plus_scaffolding",
+  "environment": {
+    "node": "26.13.0",
+    "npm": "11.20.0",
+    "package_manager": "npm",
+    "pnpm_available": false,
+    "postgres_available": false,
+    "supabase_configured": false,
+    "providers_configured": false
+  },
+  "commands": [
+    {
+      "command": "npm install --no-audit --no-fund",
+      "result": "PASS",
+      "note": "53 packages"
+    },
+    {
+      "command": "npx tsc --noEmit",
+      "result": "PASS",
+      "note": "0 errors"
+    },
+    {
+      "command": "npx vitest run",
+      "result": "PASS",
+      "note": "15 files, 123 tests, 123 passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "PASS",
+      "note": "dist/src generated"
+    }
+  ],
+  "unverified": [
+    "Postgres migrations and RLS policies",
+    "Supabase project integration",
+    "Any external provider or legal source",
+    "Backup and restore",
+    "UI, portal, Anam and accessibility",
+    "OCR, signature and filing"
+  ]
+}
